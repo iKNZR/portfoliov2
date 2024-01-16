@@ -1,0 +1,10 @@
+body {
+  margin: 0 22px;
+  font-family: "Barlow", sans-serif;
+  color: #3b3b3b
+}
+
+.img{
+  max-width: 100%;
+  display: block;
+}

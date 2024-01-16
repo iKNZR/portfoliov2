@@ -1,0 +1,77 @@
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.home-main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+.right-section img {
+    height: 100%;
+    filter: grayscale(100%);
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.left-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    animation: fadeInRight 2s ease-in-out;
+}
+
+.left-section .presentation h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.left-section .presentation h1 span{
+    color: rgb(7, 197, 0)
+}
+
+.left-section .button {
+    line-height: 40px;
+    max-width: 300px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: white;
+    border-radius: 20px;
+    border: 1.4px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-section .button div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.left-section .button div:hover {
+    transform: translateY(-40px);
+    background: black;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+}
