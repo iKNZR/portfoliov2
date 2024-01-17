@@ -36,22 +36,38 @@
 
 .about-me {
     width: 100%;
-    height: 85vh;
+    height: calc(100vh - 122px);
     display: flex;
     flex-direction: column;
 }
 
 .about h1 {
-    font-size: 3rem;
+    font-size: clamp(2.3rem, 3vw, 3rem);
     line-height: 4rem;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 10px;
 }
 
-.about-me p {
+.about-me p{
     width: 50%;
-    font-size: 2rem;
+    font-size: clamp(1.1rem, 1.7vw, 2rem);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: auto;
+    text-align: right;
+}
+
+.about-me ul, .education ul {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    padding: 0;
+}
+.about-me li, .education li{
+    width: 100%;
+    font-size: clamp(1.1rem, 1.7vw, 2rem);
     font-weight: 500;
     line-height: 1.2;
     margin: auto;
@@ -64,31 +80,33 @@
 
 .about-me div hr {
     border: 1px solid;
-    height: 70%;
+    height: clamp(40px, 60%, 100%);
     margin: auto 10px;
+}
+.skills{
+    height: calc(80vh - 122px);
 }
 
 .images-container {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
-    gap: 40px 100px;
-    margin: 100px auto;
+    width: clamp(300px, 80%, 1200px);
+    gap: clamp(20px, 5vw, 40px) clamp(40px, 5vw, 100px);
+    margin: 120px auto;
 }
+
 
 .skills-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 150px;
+    width: clamp(60px, 10vw, 150px);
+    height: clamp(60px, 10vw, 150px);
     margin: auto;
-    /* border: 2px solid;
-    border-radius: 15px; */
 }
 
 .skills-container img {
-    max-height: 95px;
+    max-height: clamp(30px, 10vw, 95px);
     filter: grayscale(100%);
     transition: transform 0.3s ease;
 }
@@ -105,10 +123,9 @@
 }
 
 .education p {
-    display: flex;
-    flex-direction: column;
+    text-align: right;
     width: 50%;
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 1.7vw, 2rem);
     font-weight: 500;
     line-height: 1.2;
     margin: auto;
@@ -116,7 +133,7 @@
 
 .education div hr {
     border: 1px solid;
-    height: 40%;
+    height: clamp(40px, 50%, 100%);
     margin: auto 10px;
 }
 
@@ -139,6 +156,7 @@
 
 .certificates-left img{
     max-height: 550px;
+    max-width: 95%;
 }
 
 .visible {
@@ -150,7 +168,7 @@
 }
 
 .certificate p{
-    font-size: 1.4rem;
+    font-size: clamp(0.8rem, 1.7vw, 1.4rem);
     font-weight: 500;
     cursor: pointer;
 }
@@ -160,3 +178,90 @@
     font-weight: 500;
 }
 
+@media (max-width: 675px){
+    .about-me div{
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    .about-me p, .education p{
+        width: 85%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .about-me ul, .education ul{
+        width: 85%;
+        text-align: center;
+        justify-content: start;
+        align-items: start;
+        margin-top: 5px;
+    }
+    
+    .about-me div hr{
+        height: 0.1px;
+        margin: 0
+    }
+
+    .education div hr{
+        height: 0.1px;
+        margin: 0
+    }
+    
+    .education div{
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+    }
+  
+
+    .certificates-left img{
+        max-height: 300px;
+        max-width: 95%;
+    }
+  
+}
+
+@media (max-width: 500px){
+    .about-me p, .education p{
+        width: 85%;
+        font-size: 13px;
+    }
+
+    .about-me ul, .education ul{
+        width: 85%;        
+    }
+
+    .about-me li, .education li{
+        font-size: 13px;
+    }
+
+    .images-container{
+        margin: 4px auto;
+    }
+
+    .certificates-container{
+        flex-direction: column-reverse;
+    }
+
+    .certificates-right{
+        width: 100%;
+    }
+
+    .certificates-left{
+        width: 100%;
+    }
+
+    .certificate hr{
+        width: 100%;
+        border: 1px solid;
+    }
+
+    .certificates-left img{
+        max-height: 200px;
+        max-width: 95%;
+    }
+}

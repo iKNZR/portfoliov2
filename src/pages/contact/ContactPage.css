@@ -11,35 +11,43 @@
 }
 
 
-.contactpage{
+.contactpage {
     display: flex;
-    height: 85vh;    
+    height: calc(100vh - 122px);
     animation: fadeInRight 1.5s ease-in-out;
 }
-.form{
-    width: 40%;
+
+.left-section {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+}
+
+.form {
+    width: 60%;
     margin: auto 0;
 }
 
-.form-group{
-    width: 98%;
+.form-group {
+    width: 96%;
+    margin: auto;
 }
 
-.form-group label{
+.form-group label {
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-.form-group input{
+.form-group input {
     width: 100%;
     height: 60px;
     border: none;
     font-size: 1.2rem;
 }
 
-.form-group textarea{
+.form-group textarea {
     padding-top: 10px;
     width: 100%;
     height: 150px;
@@ -48,21 +56,26 @@
     font-family: "Barlow", sans-serif;
 }
 
+.details {
+    width: 40%;
+}
 
-.portrait{
-    width: 60%;
+
+.portrait {
+    width: 25%;
     display: flex;
     justify-content: right;
 }
 
-.portrait img{
-    height: 100%;
-    width: 53.47%;
+.portrait img {
+    margin: auto;
+    height: 98%;
+    width: 100%;
     object-fit: cover;
     filter: grayscale(1)
 }
 
-.form button{
+.form button {
     line-height: 40px;
     width: 150px;
     max-width: 230px;
@@ -72,16 +85,18 @@
     border-radius: 20px;
     border: 1.4px solid #3b3b3b;
     position: relative;
-    overflow: hidden;    
-    background-color: transparent
+    overflow: hidden;
+    background-color: transparent;
+    margin-left: 18px;
 }
 
-.form button div{
+.form button div {
     display: flex;
     flex-direction: column;
     transition: all 0.2s ease;
 }
-.form button:hover{
+
+.form button:hover {
     background: black;
 }
 
@@ -91,4 +106,193 @@
     color: white;
     font-weight: 300;
     cursor: pointer;
+}
+
+.details {
+    width: 40%;
+    margin: 0px auto;
+}
+
+
+.details h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.details li ul li {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    align-items: center;
+    margin-left: 18px
+}
+
+.details a {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.details li img {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: 5px;
+}
+
+@media (max-width: 830px) {
+    .left-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .form-group label {
+        font-size: 1.1rem;
+    }
+
+    .form-group input {
+        width: 100%;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .form-group textarea {
+        height: 120px;
+        font-size: 1rem;
+    }
+
+    .form button {
+        line-height: 30px;
+        width: 100px;
+        max-width: 230px;
+        height: 30px;
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .form button div:hover {
+        transform: translateY(-30px);
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .details h1 {
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+    }
+
+    .details ul {
+        display: flex;
+        width: 100%;
+    }
+
+    .details ul li {
+        width: 50%;
+    }
+
+    .details li ul li {
+        font-size: 1rem;
+        line-height: 1
+    }
+
+    .details a {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .details li img {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-left: 5px;
+    }
+
+    .details ul li ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .form {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .form hr{
+        border: 0.5px solid;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-group input {
+        width: 100%;
+        height: 20px;
+        font-size: 0.8rem;
+    }
+
+    .form-group textarea {
+        height: 50px;
+        font-size: 0.8rem;
+    }
+
+    .form button {
+        line-height: 20px;
+        width: 80px;
+        max-width: 230px;
+        height: 20px;
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+
+    .form button div:hover {
+        transform: translateY(-20px);
+    }
+
+    .details h1 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }  
+
+    .details ul li{
+        margin-left:10px;
+        white-space: nowrap;
+    }
+
+    .details li ul li {
+        font-size: 0.7rem;
+        margin-left: 5px;
+    }
+
+    .details a {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
+
+    .details li img {
+        width: 0.9rem;
+        height: 0.9rem;
+        margin-left: 5px;
+    }
+
+    .details ul li ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
 }

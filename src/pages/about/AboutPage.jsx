@@ -39,21 +39,27 @@ const AboutPage = () => {
             <div className="about-me">
               <h1>ABOUT</h1>
               <div>
-                <p style={{ display: "flex", textAlign: "right" }}>
+                <p>
                   HELLO! I AM WALTER ERICKSON URIARTE DELGADO, A PASSIONATE
                   SOFTWARE ENGINEERING STUDENT AT THE PERUVIAN UNIVERSITY OF
                   APPLIED SCIENCES (UPC), IN THE LAST YEAR OF HIS DEGREE.
                 </p>
                 <hr />
-                <p>
-                  {" "}
-                  WITH A SPECIALIZED FOCUS ON WEB DEVELOPMENT, CENTERED ON THE
-                  MERN STACK, MY PASSION IS CREATING SOFTWARE THAT SIMPLIFIES
-                  EVERYDAY LIFE AND IMPROVES EFFICIENCY. I BELIEVE IN THE
-                  TRANSFORMATIVE POWER OF TECHNOLOGY TO MAKE LIFE MORE
-                  ACCESSIBLE AND ENJOYABLE. MY GOAL IS TO DEVELOP SOLUTIONS THAT
-                  MAKE A POSITIVE DIFFERENCE TO PEOPLE'S DAILY EXPERIENCE.
-                </p>
+                <ul>
+                  <li>
+                    WITH A SPECIALIZED FOCUS ON WEB DEVELOPMENT, CENTERED ON THE
+                    MERN STACK, MY PASSION IS CREATING SOFTWARE THAT SIMPLIFIES
+                    EVERYDAY LIFE AND IMPROVES EFFICIENCY.
+                  </li>
+                  <li>
+                    I BELIEVE IN THE TRANSFORMATIVE POWER OF TECHNOLOGY TO MAKE
+                    LIFE MORE ACCESSIBLE AND ENJOYABLE.
+                  </li>
+                  <li>
+                    MY GOAL IS TO DEVELOP SOLUTIONS THAT MAKE A POSITIVE
+                    DIFFERENCE TO PEOPLE'S DAILY EXPERIENCE.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -112,25 +118,20 @@ const AboutPage = () => {
             <div className="education">
               <h1>EDUCATION</h1>
               <div>
-                <p style={{ display: "flex", textAlign: "right" }}>
+                <p >
                   <span>
                     PERUVIAN UNIVERSITY OF APPLIED SCIENCES (UPC) - SOFTWARE
                     ENGINEERING
                   </span>
-                  <span>(2015 - PRESENT)</span>
                 </p>
                 <hr />
-                <p>
-                  <span>
-                    CURRENTLY STUDYING THE DEGREE OF BACHELOR IN SOFTWARE
-                    ENGINEERING.
-                  </span>
-                  <span>
-                    MEMBER OF THE WUSHU SANDA SELECTION IN THE PERIODS 2018-1
+                <ul>
+                  <li> CURRENTLY STUDYING THE DEGREE OF BACHELOR IN SOFTWARE
+                    ENGINEERING.</li>
+                  <li>MEMBER OF THE WUSHU SANDA SELECTION IN THE PERIODS 2018-1
                     AND 2019-1MEMBER OF THE WUSHU SANDA SELECTION IN THE PERIODS
-                    2018-1 AND 2019-1
-                  </span>
-                </p>
+                    2018-1 AND 2019-1</li>
+                </ul>                
               </div>
             </div>
           </div>
@@ -146,12 +147,36 @@ const AboutPage = () => {
               <h1>CERTIFICATES</h1>
               <div className="certificates-container">
                 <div className="certificates-left">
-                  {visible.html ? <img src={html2} alt="" className="visible"/> : <></>}
-                  {visible.css ? <img src={css2} alt="" className="visible"/> : <></>}
-                  {visible.javascript ? <img src={javascript2} alt="" className="visible"/> : <></>}
-                  {visible.kotlin ? <img src={kotlin} alt="" className="visible"/> : <></>}
-                  {visible.chatbot ? <img src={chatbot} alt="" className="visible"/> : <></>}
-                  {visible.dapps ? <img src={dapps} alt="" className="visible"/> : <></>}
+                  {visible.html ? (
+                    <img src={html2} alt="" className="visible" />
+                  ) : (
+                    <></>
+                  )}
+                  {visible.css ? (
+                    <img src={css2} alt="" className="visible" />
+                  ) : (
+                    <></>
+                  )}
+                  {visible.javascript ? (
+                    <img src={javascript2} alt="" className="visible" />
+                  ) : (
+                    <></>
+                  )}
+                  {visible.kotlin ? (
+                    <img src={kotlin} alt="" className="visible" />
+                  ) : (
+                    <></>
+                  )}
+                  {visible.chatbot ? (
+                    <img src={chatbot} alt="" className="visible" />
+                  ) : (
+                    <></>
+                  )}
+                  {visible.dapps ? (
+                    <img src={dapps} alt="" className="visible" />
+                  ) : (
+                    <></>
+                  )}
                 </div>
                 <div className="certificates-right">
                   <div className="certificate">
@@ -230,7 +255,6 @@ const AboutPage = () => {
                     </p>
                     <span>CODECADEMY</span>
                     <hr />
-                    
                   </div>
                   <div className="certificate">
                     <p
@@ -252,7 +276,6 @@ const AboutPage = () => {
                     </p>
                     <span>COURSERA</span>
                     <hr />
-                    
                   </div>
                   <div className="certificate">
                     <p
@@ -272,7 +295,7 @@ const AboutPage = () => {
                       DESCENTRALIZED APPLICATIONS (DAPPS)
                     </p>
                     <span>COURSERA</span>
-                    
+
                     <hr />
                   </div>
                 </div>

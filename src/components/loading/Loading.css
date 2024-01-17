@@ -1,0 +1,12 @@
+.loading{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.loading img{
+    width: 25vh;
+}
+
