@@ -1,0 +1,162 @@
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateX(-50px);
+    visibility: hidden;
+}
+
+.animate-on-scroll.is-visible {
+    animation-name: fadeInRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+.about-me {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+.about-me p {
+    width: 50%;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: auto;
+}
+
+.about-me div {
+    display: flex;
+    height: 100%;
+}
+
+.about-me div hr {
+    border: 1px solid;
+    height: 70%;
+    margin: auto 10px;
+}
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 40px 100px;
+    margin: 100px auto;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    /* border: 2px solid;
+    border-radius: 15px; */
+}
+
+.skills-container img {
+    max-height: 95px;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease;
+}
+
+.skills-container img:hover {
+    animation: bounce 0.6s;
+}
+
+
+.education div {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+}
+
+.education p {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: auto;
+}
+
+.education div hr {
+    border: 1px solid;
+    height: 40%;
+    margin: auto 10px;
+}
+
+.certificates{
+    padding-bottom: 50px;
+}
+
+.certificates-container{
+    display: flex;
+    justify-content: right;
+}
+
+.certificates-left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.certificates-left img{
+    max-height: 550px;
+}
+
+.visible {
+    animation: slide-right 0.4s ease-out;
+}
+
+.certificates-right{
+    width: 50%;
+}
+
+.certificate p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.certificate span{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
