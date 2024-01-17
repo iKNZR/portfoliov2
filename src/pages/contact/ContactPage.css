@@ -1,0 +1,94 @@
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+
+.contactpage{
+    display: flex;
+    height: 85vh;    
+    animation: fadeInRight 1.5s ease-in-out;
+}
+.form{
+    width: 40%;
+    margin: auto 0;
+}
+
+.form-group{
+    width: 98%;
+}
+
+.form-group label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.form-group input{
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.form-group textarea{
+    padding-top: 10px;
+    width: 100%;
+    height: 150px;
+    border: none;
+    font-size: 1.2rem;
+    font-family: "Barlow", sans-serif;
+}
+
+
+.portrait{
+    width: 60%;
+    display: flex;
+    justify-content: right;
+}
+
+.portrait img{
+    height: 100%;
+    width: 53.47%;
+    object-fit: cover;
+    filter: grayscale(1)
+}
+
+.form button{
+    line-height: 40px;
+    width: 150px;
+    max-width: 230px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 1.4px solid #3b3b3b;
+    position: relative;
+    overflow: hidden;    
+    background-color: transparent
+}
+
+.form button div{
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+}
+.form button:hover{
+    background: black;
+}
+
+.form button div:hover {
+    transform: translateY(-40px);
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+}
